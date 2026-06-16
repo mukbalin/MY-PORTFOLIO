@@ -28,3 +28,18 @@
 
 /* Make images responsive if any new ones are added */
 img{ max-width:100%; height:auto; }
+
+/* Fixed header spacing helper for single-page layout */
+body{ padding-top:4.5rem; }
+
+/* Animated name styles */
+.name .char{ display:inline-block; opacity:0; transform:translateY(18px) rotateX(12deg); }
+.name .char.animate{ animation: nameIn 600ms cubic-bezier(.2,.9,.2,1) forwards; }
+
+@keyframes nameIn{
+  to{ opacity:1; transform:translateY(0) rotateX(0); }
+}
+
+/* subtle underline hover on header links */
+header a:hover{ text-decoration:underline; text-underline-offset:6px; }
+
