@@ -14,71 +14,70 @@
 
     <!-- Navbar -->
     <header id="home" class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <nav class="container mx-auto px-6 py-4">
+        <nav class="container mx-auto px-4 md:px-6 py-3 md:py-4">
 
             <div class="flex items-center justify-between">
 
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
+                        width="32"
+                        height="32"
                         viewBox="0 0 24 24"
                         class="text-green-600">
                         <path fill="currentColor"
                             d="M3 14V5h1V4h16v1h1v9h-2V6H5v8zm-2 1v3h1v1h1v1h18v-1h1v-1h1v-3Zm2 3v-1h18v1Z" />
                     </svg>
 
-                    <h1 class="text-5xl font-bold text-green-600">
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-green-600">
                         Mukbal
                     </h1>
                 </div>
 
                 <!-- Menu -->
-                <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" class="md:hidden p-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" class="md:hidden p-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 min-h-12 min-w-12">
                     <span class="sr-only">Open main menu</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
 
-                <ul id="nav-menu" class="hidden md:flex items-center gap-10 text-xl text-[#2d2a4a]">
+                <ul id="nav-menu" class="hidden fixed md:relative top-16 md:top-0 left-0 right-0 md:left-auto md:right-auto flex-col md:flex-row md:flex items-start md:items-center gap-4 md:gap-6 bg-white md:bg-transparent p-4 md:p-0 text-sm md:text-base text-[#2d2a4a] shadow-md md:shadow-none z-40">
                     <li>
-                        <a href="index.html" class="text-green-600 font-medium">
+                        <a href="index.html" class="text-green-600 font-medium block min-h-10 flex items-center">
                             Home
                         </a>
                     </li>
 
                     <li>
-                        <a href="#about" class="hover:text-green-600 transition">
+                        <a href="#about" class="hover:text-green-600 transition block min-h-10 flex items-center">
                             About
                         </a>
                     </li>
 
                     <li>
-                        <a href="#services" class="hover:text-green-600 transition">
+                        <a href="#services" class="hover:text-green-600 transition block min-h-10 flex items-center">
                             Services
                         </a>
                     </li>
 
-
                     <li>
-                        <a href="projects.html" class="hover:text-green-600 transition">
+                        <a href="projects.html" class="hover:text-green-600 transition block min-h-10 flex items-center">
                             Projects
                         </a>
                     </li>
 
                     <li>
-                        <a href="contact.html" class="hover:text-green-600 transition">
+                        <a href="contact.html" class="hover:text-green-600 transition block min-h-10 flex items-center">
                             Contact
                         </a>
                     </li>
                 </ul>
 
                 <!-- Dark Mode Icon -->
-                <button>
+                <button class="hidden md:flex min-h-12 min-w-12 items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                        class="w-8 h-8 text-gray-700"
+                        class="w-6 h-6 text-gray-700"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -98,42 +97,40 @@
 
     <!-- Hero Section -->
     <main id="main">
-    <section class="bg-green-50 min-h-screen pt-24">
+    <section class="bg-green-50 min-h-screen pt-20 md:pt-24 pb-8">
 
-        <div class="container mx-auto px-8 py-16">
+        <div class="container mx-auto px-4 md:px-6 py-8 md:py-16">
 
-            <div class="flex flex-col lg:flex-row items-center justify-between">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
 
                 <!-- Left Content -->
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 w-full">
 
-                    <p class="uppercase tracking-[5px] text-gray-500 font-bold mb-4">
+                    <p class="uppercase tracking-[3px] md:tracking-[5px] text-xs md:text-sm text-gray-500 font-bold mb-3 md:mb-4">
                         Hello
                     </p>
 
                     <h1 class="text-[#2d2a4a] leading-tight">
-                        <span class="text-4xl md:text-5xl font-light block">I'm</span>
-                        <span class="text-6xl md:text-7xl font-extrabold mt-2 block">
+                        <span class="text-2xl md:text-4xl lg:text-5xl font-light block">I'm</span>
+                        <span class="text-4xl md:text-6xl lg:text-7xl font-extrabold mt-1 md:mt-2 block">
                             <span id="animated-name" class="name text-green-600"></span>
                         </span>
-                        <span class="text-2xl md:text-3xl font-light block mt-3">a Web developer</span>
+                        <span class="text-lg md:text-2xl lg:text-3xl font-light block mt-2 md:mt-3">a Web developer</span>
                     </h1>
 
-                    <p class="mt-8 text-gray-600 text-lg max-w-xl leading-9">
-                        I am a passionate web developer who creates modern,
-                        responsive and user-friendly websites using HTML,
-                        CSS, Tailwind CSS and JavaScript.
+                    <p class="mt-6 md:mt-8 text-gray-600 text-sm md:text-base lg:text-lg leading-7 md:leading-9 max-w-xl">
+                        I build modern, responsive and animated websites using HTML, CSS, Tailwind CSS and JavaScript.
                     </p>
 
-                    <div class="flex gap-5 mt-12">
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-5 mt-8 md:mt-12">
 
                         <button
-                            class="bg-green-600 text-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-green-700 transition  hover:scale-105 transition duration-300">
+                            class="bg-green-600 text-white px-6 md:px-10 py-3 md:py-4 rounded-lg md:rounded-xl text-sm md:text-base font-medium hover:bg-green-700 transition hover:scale-105 transition duration-300 min-h-12">
                             Hire Me
                         </button>
 
                         <button
-                            class="border border-green-600 text-green-600 px-10 py-4 rounded-xl text-lg font-medium hover:bg-green-600 hover:text-white transition">
+                            class="border border-green-600 text-green-600 px-6 md:px-10 py-3 md:py-4 rounded-lg md:rounded-xl text-sm md:text-base font-medium hover:bg-green-600 hover:text-white transition min-h-12">
                             Portfolio
                         </button>
 
@@ -142,9 +139,9 @@
                 </div>
 
                 <!-- Right Image -->
-                <div class="lg:w-1/2 flex justify-center mt-16 lg:mt-0">
+                <div class="lg:w-1/2 w-full flex justify-center mt-8 lg:mt-0">
 
-                    <div class="relative">
+                    <div class="relative w-full max-w-xs md:max-w-md lg:max-w-none lg:w-96">
 
                         <!-- Background Shape -->
                         <div
@@ -155,7 +152,7 @@
                         <img
                             src="me.png"
                             alt="Mukbal"
-                            class="relative z-10 w-[500px] rounded-[45%] object-cover">
+                            class="relative z-10 w-full h-auto rounded-[45%] object-cover">
 
                     </div>
 
@@ -172,62 +169,56 @@
     </main>
     
     <!-- About Section -->
-<section id="about" class="py-24 bg-white  scroll-mt-24">
+<section id="about" class="py-12 md:py-24 bg-white scroll-mt-24">
 
-    <div class="container mx-auto px-8">
+    <div class="container mx-auto px-4 md:px-6">
 
-        <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-16">
 
             <!-- Image -->
-            <div class="lg:w-1/2">
+            <div class="lg:w-1/2 w-full">
                 <img
                     src="me.png"
                     alt="Mukbal"
-                    class="w-full max-w-md mx-auto rounded-3xl shadow-lg">
+                    class="w-full max-w-xs md:max-w-md mx-auto rounded-2xl md:rounded-3xl shadow-lg">
             </div>
 
             <!-- Content -->
-            <div class="lg:w-1/2">
+            <div class="lg:w-1/2 w-full">
 
-                <p  class="uppercase tracking-[5px] text-gray-500 font-bold mb-4">
+                <p class="uppercase tracking-[3px] md:tracking-[5px] text-xs md:text-sm text-gray-500 font-bold mb-3 md:mb-4">
                     Who Am I?
                 </p>
 
-                <h2 class="text-5xl font-bold text-[#2d2a4a] mb-8">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2d2a4a] mb-6 md:mb-8">
                     I'm Mukbal, a Web Developer
                 </h2>
 
-                <p class="text-gray-600 text-lg leading-9 mb-6">
-                    I specialize in building modern, responsive and
-                    user-friendly websites using HTML, CSS, Tailwind CSS
-                    and JavaScript. I enjoy turning ideas into beautiful
-                    digital experiences that solve real-world problems.
+                <p class="text-gray-600 text-sm md:text-base lg:text-lg leading-7 md:leading-9 mb-4 md:mb-6">
+                    I specialize in building modern, responsive and user-friendly websites using HTML, CSS, Tailwind CSS and JavaScript. I enjoy turning ideas into beautiful digital experiences.
                 </p>
 
-                <p class="text-gray-600 text-lg leading-9 mb-10">
-                    My goal is to continuously improve my skills,
-                    create impactful projects, and help businesses
-                    establish a strong online presence through
-                    clean and efficient web solutions.
+                <p class="text-gray-600 text-sm md:text-base lg:text-lg leading-7 md:leading-9 mb-8 md:mb-10">
+                    My goal is to continuously improve my skills, create impactful projects, and help businesses establish a strong online presence.
                 </p>
 
                 <!-- Stats -->
-                <div class="grid grid-cols-2 gap-8 mb-10">
+                <div class="grid grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10">
 
                     <div>
-                        <h3 class="text-4xl font-bold text-green-600">
+                        <h3 class="text-3xl md:text-4xl font-bold text-green-600">
                             1+
                         </h3>
-                        <p class="text-gray-600">
+                        <p class="text-xs md:text-sm text-gray-600">
                             Projects Completed
                         </p>
                     </div>
 
                     <div>
-                        <h3 class="text-4xl font-bold text-green-600">
+                        <h3 class="text-3xl md:text-4xl font-bold text-green-600">
                             1+
                         </h3>
-                        <p class="text-gray-600">
+                        <p class="text-xs md:text-sm text-gray-600">
                             Years Learning
                         </p>
                     </div>
@@ -235,7 +226,7 @@
                 </div>
 
                 <button
-                    class=" text-white px-10 py-4 rounded-xl text-lg font-medium bg-green-500 hover:bg-green-700 transition  hover:scale-105 transition duration-300">
+                    class="text-white px-6 md:px-10 py-3 md:py-4 rounded-lg md:rounded-xl text-sm md:text-base font-medium bg-green-500 hover:bg-green-700 transition hover:scale-105 transition duration-300 min-h-12">
                     Download CV
                 </button>
 
@@ -248,63 +239,61 @@
 </section>
 
 <!-- Resume Section -->
-<section class="bg-green-50 py-24 px-6 md:px-16">
+<section class="bg-green-50 py-12 md:py-24 px-4 md:px-6">
     <div class="max-w-6xl mx-auto">
 
         <!-- Small Heading -->
-        <h3 class="uppercase tracking-wider text-gray-600 font-semibold text-lg mb-8">
+        <h3 class="uppercase tracking-wider text-xs md:text-sm text-gray-600 font-semibold mb-4 md:mb-8">
             MY RESUME
         </h3>
 
         <!-- Main Heading -->
-        <h2 class="text-4xl md:text-6xl font-light text-gray-800 font-bold leading-tight mb-10">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6 md:mb-10">
             I Build Modern and Responsive Web Applications
         </h2>
 
         <!-- Description -->
-        <p class="text-gray-600 text-lg leading-relaxed max-w-5xl mb-12">
-            I'm a passionate Software Engineering student focused on web development,
-            problem-solving, and creating user-friendly digital experiences.
-            Download my resume to learn more about my skills, projects, and experience.
+        <p class="text-gray-600 text-sm md:text-base lg:text-lg leading-7 md:leading-relaxed max-w-5xl mb-8 md:mb-12">
+            I'm a passionate Software Engineering student focused on web development, problem-solving, and creating user-friendly digital experiences. Download my resume to learn more about my skills, projects, and experience.
         </p>
 
         <!-- Button -->
         <a href="resume.pdf" download
-           class="inline-block bg-green-500 hover:bg-green-700 transition text-white text-lg font-medium px-12 py-5 rounded-2xl hover:scale-105 transition duration-300">
+           class="inline-block bg-green-500 hover:bg-green-700 transition text-white text-sm md:text-base font-medium px-6 md:px-12 py-3 md:py-5 rounded-lg md:rounded-2xl hover:scale-105 transition duration-300 min-h-12">
             Download Resume
         </a>
 
     </div>
 </section>
 
-      <section id="services" class="py-20 bg-white ">
-  <div class="max-w-7xl mx-auto px-6">
+      <section id="services" class="py-12 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
     
     <!-- Section Heading -->
-    <div class="text-center mb-16">
-      <p class="text-green-600 uppercase tracking-widest font-semibold">
+    <div class="text-center mb-12 md:mb-16">
+      <p class="text-green-600 uppercase tracking-widest font-semibold text-xs md:text-sm">
         Services
       </p>
-      <h2 class="text-5xl font-light text-slate-800 mt-2">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mt-2">
         What I do for you
       </h2>
     </div>
 
     <!-- Cards -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
       <!-- Card 1 -->
-      <div class="relative bg-green-50 rounded-3xl p-10 overflow-hidden group">
+      <div class="relative bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-10 overflow-hidden group">
         
         <!-- Number -->
-        <span class="absolute top-6 right-8 text-8xl font-bold text-slate-200 opacity-50">
+        <span class="absolute top-4 md:top-6 right-4 md:right-8 text-6xl md:text-8xl font-bold text-slate-200 opacity-50">
           01
         </span>
 
         <!-- Icon -->
-        <div class="text-green-500 mb-8">
+        <div class="text-green-500 mb-6 md:mb-8">
           <svg xmlns="http://www.w3.org/2000/svg"
-               class="w-10 h-10"
+               class="w-8 md:w-10 h-8 md:h-10"
                fill="none"
                viewBox="0 0 24 24"
                stroke="currentColor">
@@ -315,78 +304,75 @@
           </svg>
         </div>
 
-        <h3 class="text-3xl font-bold text-slate-800 mb-4">
+        <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3 md:mb-4">
           UI/UX Design
         </h3>
 
-        <p class="text-gray-600 leading-relaxed mb-8">
-          Lorem ipsum dolor sit amet sed consectetur adipisicing elit.
-          Doloret quas saepe autem, dolor set.
+        <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
+          I create beautiful, intuitive user interfaces with modern design principles and smooth interactions.
         </p>
 
         <a href="#"
-           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500 ">
+           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500 text-sm md:text-base">
           Read More
         </a>
       </div>
 
       <!-- Card 2 -->
-      <div class="relative bg-green-50 rounded-3xl p-10 overflow-hidden">
-        <span class="absolute top-6 right-8 text-8xl font-bold text-slate-200 opacity-50">
+      <div class="relative bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-10 overflow-hidden">
+        <span class="absolute top-4 md:top-6 right-4 md:right-8 text-6xl md:text-8xl font-bold text-slate-200 opacity-50">
           02
         </span>
 
-        <div class="text-green-500 mb-8">
+        <div class="text-green-500 mb-6 md:mb-8">
         <svg xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
+                        width="32"
+                        height="32"
                         viewBox="0 0 24 24"
-                        class="text-green-600">
+                        class="text-green-600 w-8 md:w-10 h-8 md:h-10">
                         <path fill="currentColor"
                             d="M3 14V5h1V4h16v1h1v9h-2V6H5v8zm-2 1v3h1v1h1v1h18v-1h1v-1h1v-3Zm2 3v-1h18v1Z" />
                     </svg>
         </div>
 
-        <h3 class="text-3xl font-bold text-slate-800 mb-4">
+        <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3 md:mb-4">
           Web Development
         </h3>
 
-        <p class="text-gray-600 leading-relaxed mb-8">
-          Lorem ipsum dolor sit amet sed consectetur adipisicing elit.
-          Doloret quas saepe autem, dolor set.
+        <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
+          I build fast, responsive websites with clean code, animations, and optimal performance.
         </p>
 
         <a href="#"
-           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500">
+           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500 text-sm md:text-base">
           Read More
         </a>
       </div>
 
       <!-- Card 3 -->
-      <div class="relative bg-green-50 rounded-3xl p-10 overflow-hidden">
-        <span class="absolute top-6 right-8 text-8xl font-bold text-slate-200 opacity-50">
+      <div class="relative bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-10 overflow-hidden">
+        <span class="absolute top-4 md:top-6 right-4 md:right-8 text-6xl md:text-8xl font-bold text-slate-200 opacity-50">
           03
         </span>
 
-        <div class="text-green-500 mb-8">
-          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+        <div class="text-green-500 mb-6 md:mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="w-8 md:w-10 h-8 md:h-10">
 	<path d="M0 0h24v24H0z" fill="none" />
 	<path fill="currentColor" d="M20 13.75a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75v6.75H14V4.25c0-.728-.002-1.2-.048-1.546c-.044-.325-.115-.427-.172-.484s-.159-.128-.484-.172C12.949 2.002 12.478 2 11.75 2s-1.2.002-1.546.048c-.325.044-.427.115-.484.172s-.128.159-.172.484c-.046.347-.048.818-.048 1.546V20.5H8V8.75A.75.75 0 0 0 7.25 8h-3a.75.75 0 0 0-.75.75V20.5H1.75a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5H20z" />
 </svg>
 
         </div>
 
-        <h3 class="text-3xl font-bold text-slate-800 mb-4">
-          Research & Analysis
+        <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3 md:mb-4">
+          Analysis & Strategy
         </h3>
 
-        <p class="text-gray-600 leading-relaxed mb-8">
-          Lorem ipsum dolor sit amet sed consectetur adipisicing elit.
-          Doloret quas saepe autem, dolor set.
+        <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
+          I analyze user needs and craft strategic solutions that deliver results and drive engagement.
         </p>
 
         <a href="#"
-           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500">
+           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500 text-sm md:text-base">
           Read More
         </a>
       </div>
@@ -395,26 +381,26 @@
   </div>
 </section>
 
-<footer id="contact" class="bg-green-50 border-t border-gray-200 py-20 ">
+<footer id="contact" class="bg-green-50 border-t border-gray-200 py-12 md:py-20">
 
-    <div class="max-w-5xl mx-auto text-center px-6">
+    <div class="max-w-5xl mx-auto text-center px-4 md:px-6">
 
-        <h4 class="uppercase tracking-widest text-gray-500 font-semibold mb-4">
+        <h4 class="uppercase tracking-widest text-xs md:text-sm text-gray-500 font-semibold mb-3 md:mb-4">
             Get In Touch
         </h4>
 
-        <h2 class="text-5xl font-light text-slate-700 mb-12">
+        <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold text-slate-700 mb-8 md:mb-12">
             Let's start a Project! Hire Me.
         </h2>
 
-        <div class="flex justify-center gap-6 flex-wrap">
+        <div class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 flex-wrap">
             <a href="#"
-                class="px-10 py-4 bg-green-600 text-white rounded-2xl text-xl hover:bg-green-700 transition  hover:scale-105 transition duration-300">
+                class="px-6 md:px-10 py-3 md:py-4 bg-green-600 text-white rounded-lg md:rounded-2xl text-sm md:text-base md:text-xl hover:bg-green-700 transition hover:scale-105 transition duration-300 min-h-12">
                 Hire Me
             </a>
 
             <a href="#"
-                class="px-10 py-4 border border-green-600 text-green-600 rounded-2xl text-xl hover:bg-green-50 transition  hover:scale-105 transition duration-300">
+                class="px-6 md:px-10 py-3 md:py-4 border border-green-600 text-green-600 rounded-lg md:rounded-2xl text-sm md:text-base md:text-xl hover:bg-green-50 transition hover:scale-105 transition duration-300 min-h-12">
                 Get In Touch
             </a>
         </div>
@@ -422,14 +408,14 @@
     </div>
 
     <!-- Bottom Footer -->
-    <div class="border-t border-gray-300 mt-20 pt-8">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <div class="border-t border-gray-300 mt-8 md:mt-20 pt-6 md:pt-8">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 md:gap-0 text-center md:text-left">
 
-            <p class="text-gray-600 text-lg">
+            <p class="text-gray-600 text-xs md:text-sm md:text-lg">
                 © 2026 Mukbal Portfolio. All Rights Reserved.
             </p>
 
-             <p class="text-gray-600 text-md">
+             <p class="text-gray-600 text-xs md:text-sm">
                 mukhtarmuki123@gmail.com
             </p>
 
