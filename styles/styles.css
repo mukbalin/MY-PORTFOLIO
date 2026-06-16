@@ -1,6 +1,88 @@
 /* Central styles for Mukbal portfolio */
 :root{
   --green: #16a34a;
+  color-scheme: light dark;
+}
+
+/* Dark mode base styles */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+html.dark body {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+html.dark header {
+  background-color: rgba(26, 26, 26, 0.9) !important;
+  border-color: #333;
+}
+
+html.dark nav a,
+html.dark nav button {
+  color: #f5f5f5;
+}
+
+html.dark nav a:hover {
+  color: var(--green);
+}
+
+html.dark section,
+html.dark footer,
+html.dark .container {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+html.dark section#about {
+  background-color: #222;
+}
+
+html.dark .bg-white {
+  background-color: #222 !important;
+}
+
+html.dark .bg-green-50 {
+  background-color: #1a3a1a !important;
+}
+
+html.dark .text-gray-600 {
+  color: #d0d0d0 !important;
+}
+
+html.dark .text-gray-500 {
+  color: #a0a0a0 !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-800 {
+  color: #f5f5f5 !important;
+}
+
+html.dark .text-\[\#2d2a4a\] {
+  color: #f5f5f5 !important;
+}
+
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: #333 !important;
+}
+
+html.dark .shadow-lg,
+html.dark .shadow-md,
+html.dark .shadow-sm {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark button:not(.bg-green-600),
+html.dark a:not(.bg-green-600) {
+  transition: color 0.3s ease;
 }
 
 /* Mobile-friendly body padding for fixed header */
