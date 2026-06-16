@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Mukbal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="bg-white">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="bg-white w-full py-6">
+        <nav class="container mx-auto px-8 flex items-center justify-between">
+            <h1 class="text-2xl font-bold text-green-600">Mukbal</h1>
+            <ul class="flex items-center gap-6">
+                <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+                <li><a href="projects.html" class="hover:text-green-600">Projects</a></li>
+                <li><a href="contact.html" class="text-green-600 font-medium">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="container mx-auto px-8 py-16">
+        <h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
+
+        <form action="https://formspree.io/f/{your_form_id}" method="POST" class="max-w-xl">
+            <label class="block mb-4">
+                <span class="text-gray-700">Name</span>
+                <input name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" />
+            </label>
+
+            <label class="block mb-4">
+                <span class="text-gray-700">Email</span>
+                <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" />
+            </label>
+
+            <label class="block mb-4">
+                <span class="text-gray-700">Message</span>
+                <textarea name="message" rows="6" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+            </label>
+
+            <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-md">Send Message</button>
+        </form>
+
+    </main>
+
+    <footer class="border-t py-10 mt-12">
+        <div class="container mx-auto px-8 text-center text-gray-600">© 2026 Mukbal</div>
+    </footer>
+
+</body>
+</html>

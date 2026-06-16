@@ -6,9 +6,11 @@
     <title>Mukbal Portfolio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="bg-white">
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Navbar -->
     <header id="home" class="bg-white w-full ">
@@ -33,9 +35,16 @@
                 </div>
 
                 <!-- Menu -->
-                <ul class="hidden md:flex items-center gap-10 text-xl text-[#2d2a4a]">
+                <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" class="md:hidden p-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <span class="sr-only">Open main menu</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <ul id="nav-menu" class="hidden md:flex items-center gap-10 text-xl text-[#2d2a4a]">
                     <li>
-                        <a href="#" class="text-green-600 font-medium">
+                        <a href="index.html" class="text-green-600 font-medium">
                             Home
                         </a>
                     </li>
@@ -54,7 +63,13 @@
 
 
                     <li>
-                        <a href="#contact" class="hover:text-green-600 transition">
+                        <a href="projects.html" class="hover:text-green-600 transition">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="hover:text-green-600 transition">
                             Contact
                         </a>
                     </li>
@@ -82,6 +97,7 @@
     </header>
 
     <!-- Hero Section -->
+    <main id="main">
     <section class="bg-green-50 min-h-screen">
 
         <div class="container mx-auto px-8 py-16">
@@ -163,6 +179,7 @@
         
 
     </section>
+    </main>
     
     <!-- About Section -->
 <section id="about" class="py-24 bg-white  scroll-mt-24">
@@ -437,3 +454,16 @@
 
 </body>
 </html>
+
+<script>
+(() => {
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
+    });
+})();
+</script>

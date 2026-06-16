@@ -1,0 +1,30 @@
+/* Central styles for Mukbal portfolio */
+:root{
+  --green: #16a34a;
+}
+
+.skip-link{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus{
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border: 2px solid var(--green);
+  border-radius: 6px;
+  z-index: 9999;
+}
+
+/* Small accessibility helpers */
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+/* Make images responsive if any new ones are added */
+img{ max-width:100%; height:auto; }
