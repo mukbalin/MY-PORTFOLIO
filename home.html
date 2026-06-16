@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukbal Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <header id="home" class="bg-white w-full ">
+        <nav class="container mx-auto px-8 py-8">
+
+            <div class="flex items-center justify-between">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 24 24"
+                        class="text-green-600">
+                        <path fill="currentColor"
+                            d="M3 14V5h1V4h16v1h1v9h-2V6H5v8zm-2 1v3h1v1h1v1h18v-1h1v-1h1v-3Zm2 3v-1h18v1Z" />
+                    </svg>
+
+                    <h1 class="text-5xl font-bold text-green-600">
+                        Mukbal
+                    </h1>
+                </div>
+
+                <!-- Menu -->
+                <ul class="hidden md:flex items-center gap-10 text-xl text-[#2d2a4a]">
+                    <li>
+                        <a href="#" class="text-green-600 font-medium">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="hover:text-green-600 transition">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services" class="hover:text-green-600 transition">
+                            Services
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#contact" class="hover:text-green-600 transition">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dark Mode Icon -->
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-8 h-8 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M21 12.79A9 9 0 1111.21 3
+                            7 7 0 0021 12.79z" />
+                    </svg>
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-green-50 min-h-screen">
+
+        <div class="container mx-auto px-8 py-16">
+
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+
+                <!-- Left Content -->
+                <div class="lg:w-1/2">
+
+                    <p class="uppercase tracking-[5px] text-gray-500 font-bold mb-4">
+                        Hello
+                    </p>
+
+                    <h1 class="text-[#2d2a4a] leading-none">
+
+                        <span class="text-6xl md:text-7xl font-light">
+                            I'm
+                        </span>
+
+                        <span class="text-6xl md:text-7xl font-bold">
+                            Mukbal
+                        </span>
+
+                        <br>
+
+                        <span class="text-6xl md:text-7xl font-light">
+                            a Web developer
+                        </span>
+
+                    </h1>
+
+                    <p class="mt-8 text-gray-600 text-lg max-w-xl leading-9">
+                        I am a passionate web developer who creates modern,
+                        responsive and user-friendly websites using HTML,
+                        CSS, Tailwind CSS and JavaScript.
+                    </p>
+
+                    <div class="flex gap-5 mt-12">
+
+                        <button
+                            class="bg-green-600 text-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-green-700 transition  hover:scale-105 transition duration-300">
+                            Hire Me
+                        </button>
+
+                        <button
+                            class="border border-green-600 text-green-600 px-10 py-4 rounded-xl text-lg font-medium hover:bg-green-600 hover:text-white transition">
+                            Portfolio
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Image -->
+                <div class="lg:w-1/2 flex justify-center mt-16 lg:mt-0">
+
+                    <div class="relative">
+
+                        <!-- Background Shape -->
+                        <div
+                            class="absolute inset-0 bg-green-500 rounded-[45%] rotate-12 scale-110">
+                        </div>
+
+                        <!-- Image -->
+                        <img
+                            src="me.png"
+                            alt="Mukbal"
+                            class="relative z-10 w-[500px] rounded-[45%] object-cover">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Floating Side Button -->
+        
+
+    </section>
+    
+    <!-- About Section -->
+<section id="about" class="py-24 bg-white  scroll-mt-24">
+
+    <div class="container mx-auto px-8">
+
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+
+            <!-- Image -->
+            <div class="lg:w-1/2">
+                <img
+                    src="me.png"
+                    alt="Mukbal"
+                    class="w-full max-w-md mx-auto rounded-3xl shadow-lg">
+            </div>
+
+            <!-- Content -->
+            <div class="lg:w-1/2">
+
+                <p  class="uppercase tracking-[5px] text-gray-500 font-bold mb-4">
+                    Who Am I?
+                </p>
+
+                <h2 class="text-5xl font-bold text-[#2d2a4a] mb-8">
+                    I'm Mukbal, a Web Developer
+                </h2>
+
+                <p class="text-gray-600 text-lg leading-9 mb-6">
+                    I specialize in building modern, responsive and
+                    user-friendly websites using HTML, CSS, Tailwind CSS
+                    and JavaScript. I enjoy turning ideas into beautiful
+                    digital experiences that solve real-world problems.
+                </p>
+
+                <p class="text-gray-600 text-lg leading-9 mb-10">
+                    My goal is to continuously improve my skills,
+                    create impactful projects, and help businesses
+                    establish a strong online presence through
+                    clean and efficient web solutions.
+                </p>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 gap-8 mb-10">
+
+                    <div>
+                        <h3 class="text-4xl font-bold text-green-600">
+                            1+
+                        </h3>
+                        <p class="text-gray-600">
+                            Projects Completed
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-4xl font-bold text-green-600">
+                            1+
+                        </h3>
+                        <p class="text-gray-600">
+                            Years Learning
+                        </p>
+                    </div>
+
+                </div>
+
+                <button
+                    class=" text-white px-10 py-4 rounded-xl text-lg font-medium bg-green-500 hover:bg-green-700 transition  hover:scale-105 transition duration-300">
+                    Download CV
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Resume Section -->
+<section class="bg-green-50 py-24 px-6 md:px-16">
+    <div class="max-w-6xl mx-auto">
+
+        <!-- Small Heading -->
+        <h3 class="uppercase tracking-wider text-gray-600 font-semibold text-lg mb-8">
+            MY RESUME
+        </h3>
+
+        <!-- Main Heading -->
+        <h2 class="text-4xl md:text-6xl font-light text-gray-800 font-bold leading-tight mb-10">
+            I Build Modern and Responsive Web Applications
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-600 text-lg leading-relaxed max-w-5xl mb-12">
+            I'm a passionate Software Engineering student focused on web development,
+            problem-solving, and creating user-friendly digital experiences.
+            Download my resume to learn more about my skills, projects, and experience.
+        </p>
+
+        <!-- Button -->
+        <a href="resume.pdf" download
+           class="inline-block bg-green-500 hover:bg-green-700 transition text-white text-lg font-medium px-12 py-5 rounded-2xl hover:scale-105 transition duration-300">
+            Download Resume
+        </a>
+
+    </div>
+</section>
+
+      <section id="services" class="py-20 bg-white ">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Section Heading -->
+    <div class="text-center mb-16">
+      <p class="text-green-600 uppercase tracking-widest font-semibold">
+        Services
+      </p>
+      <h2 class="text-5xl font-light text-slate-800 mt-2">
+        What I do for you
+      </h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="relative bg-green-50 rounded-3xl p-10 overflow-hidden group">
+        
+        <!-- Number -->
+        <span class="absolute top-6 right-8 text-8xl font-bold text-slate-200 opacity-50">
+          01
+        </span>
+
+        <!-- Icon -->
+        <div class="text-green-500 mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="w-10 h-10"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M18.586 2.586a2 2 0 112.828 2.828L12 14l-4 1 1-4 9.586-9.414z"/>
+          </svg>
+        </div>
+
+        <h3 class="text-3xl font-bold text-slate-800 mb-4">
+          UI/UX Design
+        </h3>
+
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Lorem ipsum dolor sit amet sed consectetur adipisicing elit.
+          Doloret quas saepe autem, dolor set.
+        </p>
+
+        <a href="#"
+           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500 ">
+          Read More
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative bg-green-50 rounded-3xl p-10 overflow-hidden">
+        <span class="absolute top-6 right-8 text-8xl font-bold text-slate-200 opacity-50">
+          02
+        </span>
+
+        <div class="text-green-500 mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 24 24"
+                        class="text-green-600">
+                        <path fill="currentColor"
+                            d="M3 14V5h1V4h16v1h1v9h-2V6H5v8zm-2 1v3h1v1h1v1h18v-1h1v-1h1v-3Zm2 3v-1h18v1Z" />
+                    </svg>
+        </div>
+
+        <h3 class="text-3xl font-bold text-slate-800 mb-4">
+          Web Development
+        </h3>
+
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Lorem ipsum dolor sit amet sed consectetur adipisicing elit.
+          Doloret quas saepe autem, dolor set.
+        </p>
+
+        <a href="#"
+           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500">
+          Read More
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative bg-green-50 rounded-3xl p-10 overflow-hidden">
+        <span class="absolute top-6 right-8 text-8xl font-bold text-slate-200 opacity-50">
+          03
+        </span>
+
+        <div class="text-green-500 mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+	<path d="M0 0h24v24H0z" fill="none" />
+	<path fill="currentColor" d="M20 13.75a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75v6.75H14V4.25c0-.728-.002-1.2-.048-1.546c-.044-.325-.115-.427-.172-.484s-.159-.128-.484-.172C12.949 2.002 12.478 2 11.75 2s-1.2.002-1.546.048c-.325.044-.427.115-.484.172s-.128.159-.172.484c-.046.347-.048.818-.048 1.546V20.5H8V8.75A.75.75 0 0 0 7.25 8h-3a.75.75 0 0 0-.75.75V20.5H1.75a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5H20z" />
+</svg>
+
+        </div>
+
+        <h3 class="text-3xl font-bold text-slate-800 mb-4">
+          Research & Analysis
+        </h3>
+
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Lorem ipsum dolor sit amet sed consectetur adipisicing elit.
+          Doloret quas saepe autem, dolor set.
+        </p>
+
+        <a href="#"
+           class="inline-block font-semibold text-slate-800 border-b-2 border-green-500">
+          Read More
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="bg-green-50 border-t border-gray-200 py-20 ">
+
+    <div class="max-w-5xl mx-auto text-center px-6">
+
+        <h4 class="uppercase tracking-widest text-gray-500 font-semibold mb-4">
+            Get In Touch
+        </h4>
+
+        <h2 class="text-5xl font-light text-slate-700 mb-12">
+            Let's start a Project! Hire Me.
+        </h2>
+
+        <div class="flex justify-center gap-6 flex-wrap">
+            <a href="#"
+                class="px-10 py-4 bg-green-600 text-white rounded-2xl text-xl hover:bg-green-700 transition  hover:scale-105 transition duration-300">
+                Hire Me
+            </a>
+
+            <a href="#"
+                class="px-10 py-4 border border-green-600 text-green-600 rounded-2xl text-xl hover:bg-green-50 transition  hover:scale-105 transition duration-300">
+                Get In Touch
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-300 mt-20 pt-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+
+            <p class="text-gray-600 text-lg">
+                © 2026 Mukbal Portfolio. All Rights Reserved.
+            </p>
+
+             <p class="text-gray-600 text-md">
+                mukhtarmuki123@gmail.com
+            </p>
+
+             <a href="#home"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:bg-green-700 transition  hover:scale-105 transition duration-300">
+        ↑
+    </a>
+
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
