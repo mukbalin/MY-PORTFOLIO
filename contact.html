@@ -10,38 +10,141 @@
 <body class="bg-white">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="bg-white w-full py-6">
-        <nav class="container mx-auto px-8 flex items-center justify-between">
-            <h1 class="text-2xl font-bold text-green-600">Mukbal</h1>
-            <ul class="flex items-center gap-6">
-                <li><a href="index.html" class="hover:text-green-600">Home</a></li>
-                <li><a href="projects.html" class="hover:text-green-600">Projects</a></li>
-                <li><a href="contact.html" class="text-green-600 font-medium">Contact</a></li>
-            </ul>
+    <!-- Navbar -->
+    <header id="home" class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-4 md:px-6 py-3 md:py-4">
+
+            <div class="flex items-center justify-between">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        class="text-green-600">
+                        <path fill="currentColor"
+                            d="M3 14V5h1V4h16v1h1v9h-2V6H5v8zm-2 1v3h1v1h1v1h18v-1h1v-1h1v-3Zm2 3v-1h18v1Z" />
+                    </svg>
+
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-green-600">
+                        Mukbal
+                    </h1>
+                </div>
+
+                <!-- Menu -->
+                <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" class="md:hidden p-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 min-h-12 min-w-12">
+                    <span class="sr-only">Open main menu</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <ul id="nav-menu" class="hidden fixed md:relative top-16 md:top-0 left-0 right-0 md:left-auto md:right-auto flex-col md:flex-row md:flex items-start md:items-center gap-4 md:gap-6 bg-white md:bg-transparent p-4 md:p-0 text-sm md:text-base text-[#2d2a4a] shadow-md md:shadow-none z-40">
+                    <li>
+                        <a href="index.html" class="text-green-600 font-medium block min-h-10 flex items-center">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="hover:text-green-600 transition block min-h-10 flex items-center">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services" class="hover:text-green-600 transition block min-h-10 flex items-center">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html" class="hover:text-green-600 transition block min-h-10 flex items-center">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="hover:text-green-600 transition block min-h-10 flex items-center">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dark Mode Icon -->
+                <button class="hidden md:flex min-h-12 min-w-12 items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M21 12.79A9 9 0 1111.21 3
+                            7 7 0 0021 12.79z" />
+                    </svg>
+                </button>
+
+            </div>
+
         </nav>
     </header>
 
     <main id="main" class="container mx-auto px-8 py-16">
-        <h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
+        <!-- message form --> 
+<div
+  class="max-w-md mx-auto relative overflow-hidden z-10 bg-white p-8 
+   rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-green-500 before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-green-400 after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12"
+>
+  <h2 class="text-2xl text-gray-900 font-bold mb-6">Send Message</h2>
 
-        <form action="https://formspree.io/f/{your_form_id}" method="POST" class="max-w-xl">
-            <label class="block mb-4">
-                <span class="text-gray-700">Name</span>
-                <input name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" />
-            </label>
+  <form method="post" action="#">
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-600" for="name"
+        >Full Name</label
+      >
+      <input class="bg-white mt-1 p-2 w-full border rounded-md" type="text" />
+    </div>
 
-            <label class="block mb-4">
-                <span class="text-gray-700">Email</span>
-                <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" />
-            </label>
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-600" for="email"
+        >Email Address</label
+      >
+      <input
+        class="bg-white mt-1 p-2 w-full border rounded-md"
+        name="email"
+        id="email"
+        type="email"
+      />
+    </div>
 
-            <label class="block mb-4">
-                <span class="text-gray-700">Message</span>
-                <textarea name="message" rows="6" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
-            </label>
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-600" for="bio"
+        >Message</label
+      >
+      <textarea
+        class="bg-white mt-1 p-2 w-full border rounded-md "
+        rows="3"
+        name="bio"
+        id="bio"
+      ></textarea>
+    </div>
 
-            <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-md">Send Message</button>
-        </form>
+    <div class="flex justify-end">
+      <button
+        class="[background:linear-gradient(green,green,green_30%,green)] 
+        text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
+        type="submit"
+      >
+        Send Messge
+      </button>
+    </div>
+  </form>
+</div>
+
 
     </main>
 
