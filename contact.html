@@ -147,10 +147,11 @@
 <script>
 (function(){
     const toggle = document.getElementById('dark-mode-toggle');
+    const switchControl = document.getElementById('darkbutton');
     const html = document.documentElement;
     const storageKey = 'darkMode';
 
-    if (!toggle) return;
+    if (!toggle || !switchControl) return;
 
     const applyTheme = (isDark) => {
         html.classList.toggle('dark', isDark);
@@ -162,8 +163,10 @@
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     applyTheme(savedPreference === null ? prefersDark : savedPreference === 'true');
 
-    toggle.addEventListener('change', () => {
-        applyTheme(toggle.checked);
+    switchControl.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        applyTheme(!toggle.checked);
     });
 })();
 </script>
