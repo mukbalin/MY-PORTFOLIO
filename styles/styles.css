@@ -1,88 +1,114 @@
 /* Central styles for Mukbal portfolio */
-:root{
+:root {
   --green: #16a34a;
-  color-scheme: light dark;
+  --green-strong: #22c55e;
+  --bg: #f6fff8;
+  --surface: #ffffff;
+  --surface-alt: #f1fff5;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --heading: #2d2a4a;
+  --border: rgba(15, 23, 42, 0.08);
+  --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  --navbar-bg: rgba(255, 255, 255, 0.92);
+  color-scheme: light;
 }
 
-/* Dark mode base styles */
 html.dark {
+  --green: #4ade80;
+  --green-strong: #86efac;
+  --bg: #07110c;
+  --surface: #111827;
+  --surface-alt: #172033;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --heading: #f8fafc;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --navbar-bg: rgba(17, 24, 39, 0.92);
   color-scheme: dark;
 }
 
-html.dark {
-  background-color: #1a1a1a;
-  color: #f5f5f5;
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-html.dark body {
-  background-color: #1a1a1a;
-  color: #f5f5f5;
+header {
+  background-color: var(--navbar-bg) !important;
 }
 
 html.dark header {
-  background-color: rgba(26, 26, 26, 0.9) !important;
-  border-color: #333;
+  border-color: var(--border);
 }
 
 html.dark nav a,
 html.dark nav button {
-  color: #f5f5f5;
+  color: var(--text);
 }
 
 html.dark nav a:hover {
   color: var(--green);
 }
 
-html.dark section,
-html.dark footer,
-html.dark .container {
-  background-color: #1a1a1a;
-  color: #f5f5f5;
-}
-
-html.dark section#about {
-  background-color: #222;
-}
-
 html.dark .bg-white {
-  background-color: #222 !important;
+  background-color: var(--surface) !important;
 }
 
-html.dark .bg-green-50 {
-  background-color: #1a3a1a !important;
+html.dark .bg-green-50,
+html.dark .resume-section {
+  background-color: var(--surface-alt) !important;
 }
 
-html.dark .text-gray-600 {
-  color: #d0d0d0 !important;
+.resume-section {
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
 }
 
+.resume-section a:hover {
+  background-color: var(--green-strong) !important;
+}
+
+html.dark .text-gray-600,
 html.dark .text-gray-500 {
-  color: #a0a0a0 !important;
+  color: var(--muted) !important;
 }
 
 html.dark .text-slate-700,
-html.dark .text-slate-800 {
-  color: #f5f5f5 !important;
-}
-
+html.dark .text-slate-800,
 html.dark .text-\[\#2d2a4a\] {
-  color: #f5f5f5 !important;
+  color: var(--heading) !important;
 }
 
 html.dark .border-gray-200,
 html.dark .border-gray-300 {
-  border-color: #333 !important;
+  border-color: var(--border) !important;
 }
 
 html.dark .shadow-lg,
 html.dark .shadow-md,
 html.dark .shadow-sm {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: var(--shadow) !important;
 }
 
-html.dark button:not(.bg-green-600),
-html.dark a:not(.bg-green-600) {
-  transition: color 0.3s ease;
+html.dark .text-green-600 {
+  color: var(--green) !important;
+}
+
+html.dark .bg-green-600 {
+  background-color: var(--green-strong) !important;
+}
+
+html.dark .border-green-600 {
+  border-color: var(--green) !important;
+  color: var(--green) !important;
+}
+
+html.dark .hover\:text-green-600:hover {
+  color: var(--green) !important;
 }
 
 /* Mobile-friendly body padding for fixed header */
@@ -133,8 +159,36 @@ img{ max-width:100%; height:auto; display:block; }
   animation: nameIn 600ms cubic-bezier(.2,.9,.2,1) forwards; 
 }
 
-@keyframes nameIn{
-  to{ opacity:1; transform:translateY(0) rotateX(0); }
+.hero-orbit {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.95), rgba(74, 222, 128, 0.7));
+  box-shadow: 0 0 0 12px rgba(22, 163, 74, 0.12), 0 0 40px rgba(22, 163, 74, 0.2);
+  animation: orbitPulse 4.8s ease-in-out infinite;
+  transform-origin: center;
+  z-index: 0;
+}
+
+@keyframes orbitPulse {
+  0% {
+    transform: rotate(0deg) scale(1.03);
+  }
+  25% {
+    transform: rotate(10deg) scale(1.08);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.12);
+  }
+  75% {
+    transform: rotate(-10deg) scale(1.08);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit {
+    animation: none;
+  }
 }
 
 /* Reduce animations on mobile for better performance */

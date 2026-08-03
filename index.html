@@ -10,7 +10,7 @@
     <script></script>
 </head>
 
-<body id="fullbg" class="bg-white">
+<body id="fullbg" class="bg-transparent">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Navbar -->
@@ -76,7 +76,7 @@
                 </ul>
 
                 <!-- Dark Mode Icon -->
-                <label id="darkbutton" class="relative inline-flex items-center cursor-pointer ml-2">
+                <label id="darkbutton" class="relative inline-flex items-center cursor-pointer ml-2" aria-label="Toggle dark mode">
                     <input id="dark-mode-toggle" class="sr-only peer" type="checkbox" />
                     <div
                         class="w-24 h-12 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-10 before:w-10 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[4px] after:right-1 after:translate-y-full after:w-10 after:h-10 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0"
@@ -137,9 +137,7 @@
                     <div class="relative w-full max-w-xs md:max-w-md lg:max-w-none lg:w-96">
 
                         <!-- Background Shape -->
-                        <div
-                            class="absolute inset-0 bg-green-500 rounded-[45%] rotate-12 scale-110">
-                        </div>
+                        <div class="hero-orbit absolute inset-0 rounded-[45%] scale-110"></div>
 
                         <!-- Image -->
                         <img
@@ -233,27 +231,27 @@
 </section>
 
 <!-- Resume Section -->
-<section class="bg-green-50 py-12 md:py-24 px-4 md:px-6">
+<section class="resume-section py-12 md:py-24 px-4 md:px-6">
     <div class="max-w-6xl mx-auto">
 
         <!-- Small Heading -->
-        <h3 class="uppercase tracking-wider text-xs md:text-sm text-gray-600 font-semibold mb-4 md:mb-8">
+        <h3 class="uppercase tracking-wider text-xs md:text-sm font-semibold mb-4 md:mb-8" style="color: var(--muted);">
             MY RESUME
         </h3>
 
         <!-- Main Heading -->
-        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6 md:mb-10">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-10" style="color: var(--heading);">
             I Build Modern and Responsive Web Applications
         </h2>
 
         <!-- Description -->
-        <p class="text-gray-600 text-sm md:text-base lg:text-lg leading-7 md:leading-relaxed max-w-5xl mb-8 md:mb-12">
+        <p class="text-sm md:text-base lg:text-lg leading-7 md:leading-relaxed max-w-5xl mb-8 md:mb-12" style="color: var(--muted);">
             I'm a passionate Software Engineering student focused on web development, problem-solving, and creating user-friendly digital experiences. Download my resume to learn more about my skills, projects, and experience.
         </p>
 
         <!-- Button -->
         <a href="MUKBAL_RESUME.pdf" download
-           class="inline-block bg-green-500 hover:bg-green-700 transition text-white text-sm md:text-base font-medium px-6 md:px-12 py-3 md:py-5 rounded-lg md:rounded-2xl hover:scale-105 transition duration-300 min-h-12">
+           class="inline-block text-sm md:text-base font-medium px-6 md:px-12 py-3 md:py-5 rounded-lg md:rounded-2xl hover:scale-105 transition duration-300 min-h-12" style="background-color: var(--green); color: white;">
             Download Resume
         </a>
 
@@ -439,57 +437,47 @@
 </script>
 
 <script>
-// Animated name: split letters and stagger animation
 (function(){
     const nameEl = document.getElementById('animated-name');
-    if(!nameEl) return;
-    const name = 'Mukbal';
-    // create spans
-    nameEl.innerHTML = '';
-    name.split('').forEach((ch,i)=>{
-        const span = document.createElement('span');
-        span.className = 'char';
-        span.textContent = ch;
-        span.style.setProperty('--d', (i * 70) + 'ms');
-        nameEl.appendChild(span);
-    });
-    // force reflow then add animate class with stagger
-    requestAnimationFrame(()=>{
-        const chars = nameEl.querySelectorAll('.char');
-        chars.forEach((c, idx)=>{
-            setTimeout(()=> c.classList.add('animate'), idx * 70);
-        });
-    });
+    if (!nameEl) return;
+
+    const text = 'Mukbal';
+    let index = 0;
+
+    const type = () => {
+        if (index <= text.length) {
+            nameEl.textContent = text.slice(0, index);
+            index += 1;
+            setTimeout(type, 120);
+        }
+    };
+
+    type();
 })();
 </script>
 
 <script>
 (function(){
     const toggle = document.getElementById('dark-mode-toggle');
-    const switchControl = document.getElementById('darkbutton');
     const html = document.documentElement;
-    const storageKey = 'darkMode';
 
-    if (!toggle || !switchControl) return;
+    if (!toggle) return;
 
     const applyTheme = (isDark) => {
         html.classList.toggle('dark', isDark);
         toggle.checked = isDark;
-        localStorage.setItem(storageKey, String(isDark));
+        localStorage.setItem('darkMode', isDark ? 'true' : 'false');
     };
 
-    const savedPreference = localStorage.getItem(storageKey);
+    const savedPreference = localStorage.getItem('darkMode');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     applyTheme(savedPreference === null ? prefersDark : savedPreference === 'true');
 
-    switchControl.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        applyTheme(!toggle.checked);
+    toggle.addEventListener('change', () => {
+        applyTheme(toggle.checked);
     });
 })();
 </script>
-
 
 </body>
 </html>
