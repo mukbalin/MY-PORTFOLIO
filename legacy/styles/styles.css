@@ -1,13 +1,13 @@
 /* Central styles for Mukbal portfolio */
 :root {
-  --green: #16a34a;
-  --green-strong: #22c55e;
-  --bg: #f6fff8;
+  --accent: #2563eb;
+  --blue-strong: #3b82f6;
+  --bg: #f5f7ff;
   --surface: #ffffff;
-  --surface-alt: #f1fff5;
+  --surface-alt: #eef2ff;
   --text: #1f2937;
   --muted: #6b7280;
-  --heading: #2d2a4a;
+  --heading: #182442;
   --border: rgba(15, 23, 42, 0.08);
   --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
   --navbar-bg: rgba(255, 255, 255, 0.92);
@@ -15,17 +15,17 @@
 }
 
 html.dark {
-  --green: #4ade80;
-  --green-strong: #86efac;
-  --bg: #07110c;
-  --surface: #111827;
-  --surface-alt: #172033;
+  --accent: #60a5fa;
+  --blue-strong: #93c5fd;
+  --bg: #080d1b;
+  --surface: #10182b;
+  --surface-alt: #141e35;
   --text: #f8fafc;
   --muted: #cbd5e1;
   --heading: #f8fafc;
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  --navbar-bg: rgba(17, 24, 39, 0.92);
+  --navbar-bg: rgba(16, 24, 43, 0.92);
   color-scheme: dark;
 }
 
@@ -49,14 +49,14 @@ html.dark nav button {
 }
 
 html.dark nav a:hover {
-  color: var(--green);
+  color: var(--accent);
 }
 
 html.dark .bg-white {
   background-color: var(--surface) !important;
 }
 
-html.dark .bg-green-50,
+html.dark .bg-blue-50,
 html.dark .resume-section {
   background-color: var(--surface-alt) !important;
 }
@@ -69,7 +69,7 @@ html.dark .resume-section {
 }
 
 .resume-section a:hover {
-  background-color: var(--green-strong) !important;
+  background-color: var(--blue-strong) !important;
 }
 
 html.dark .text-gray-600,
@@ -79,7 +79,7 @@ html.dark .text-gray-500 {
 
 html.dark .text-slate-700,
 html.dark .text-slate-800,
-html.dark .text-\[\#2d2a4a\] {
+html.dark .text-\[\#182442\] {
   color: var(--heading) !important;
 }
 
@@ -94,21 +94,21 @@ html.dark .shadow-sm {
   box-shadow: var(--shadow) !important;
 }
 
-html.dark .text-green-600 {
-  color: var(--green) !important;
+html.dark .text-blue-600 {
+  color: var(--accent) !important;
 }
 
-html.dark .bg-green-600 {
-  background-color: var(--green-strong) !important;
+html.dark .bg-blue-600 {
+  background-color: var(--blue-strong) !important;
 }
 
-html.dark .border-green-600 {
-  border-color: var(--green) !important;
-  color: var(--green) !important;
+html.dark .border-blue-600 {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
 }
 
-html.dark .hover\:text-green-600:hover {
-  color: var(--green) !important;
+html.dark .hover\:text-blue-600:hover {
+  color: var(--accent) !important;
 }
 
 /* Mobile-friendly body padding for fixed header */
@@ -137,7 +137,7 @@ body {
   height: auto;
   padding: 0.5rem 0.75rem;
   background: white;
-  border: 2px solid var(--green);
+  border: 2px solid var(--accent);
   border-radius: 6px;
   z-index: 9999;
 }
@@ -160,8 +160,8 @@ img{ max-width:100%; height:auto; display:block; }
 }
 
 .hero-orbit {
-  background: linear-gradient(135deg, rgba(22, 163, 74, 0.95), rgba(74, 222, 128, 0.7));
-  box-shadow: 0 0 0 12px rgba(22, 163, 74, 0.12), 0 0 40px rgba(22, 163, 74, 0.2);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(139, 92, 246, 0.7));
+  box-shadow: 0 0 0 12px rgba(37, 99, 235, 0.12), 0 0 40px rgba(37, 99, 235, 0.2);
   animation: orbitPulse 4.8s ease-in-out infinite;
   transform-origin: center;
   z-index: 0;
@@ -239,3 +239,17 @@ html {
   p { line-height: 1.6; }
 }
 
+
+/* Shared blue identity in both light and dark themes. */
+:root { --accent-hover: #1d4ed8; }
+html.dark { --accent-hover: #1d4ed8; }
+.text-blue-500, .text-blue-600 { color: var(--accent); }
+.bg-blue-500, .bg-blue-600, html.dark .bg-blue-600 { background-color: #2563eb !important; }
+.hover\:bg-blue-600:hover, .hover\:bg-blue-700:hover { background-color: var(--accent-hover) !important; }
+.hover\:text-blue-600:hover { color: var(--accent); }
+.hover\:text-white:hover { color: #fff !important; }
+html.dark .text-blue-500 { color: var(--accent); }
+html.dark .text-gray-900, html.dark .text-gray-700 { color: var(--heading); }
+html.dark input, html.dark textarea { border-color: #344875; }
+:focus-visible { outline-color: var(--accent); }
+::selection { background: #3b82f640; color: var(--heading); }
