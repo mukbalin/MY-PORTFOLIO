@@ -5,7 +5,10 @@ export default function Footer() {
     <>
       <aside className="side-rail" aria-label="Quick links">
         <SocialLinks compact />
-        <a href="mailto:mukhtarmuki123@gmail.com" aria-label="Email Mukbal">
+        <a
+          href="mailto:mukhtarmuki123@gmail.com"
+          aria-label="Email Mukhtar Bello"
+        >
           <Icon name="mail" size={18} />
         </a>
         <a href="/Mukhtar_Bello_CV.pdf" download aria-label="Download CV">

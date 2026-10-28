@@ -18,7 +18,7 @@ export default function Header() {
         <Link
           href="/"
           className="wordmark"
-          aria-label="Mukbal home"
+          aria-label="Mukhtar Bello home"
           onClick={() => setOpen(false)}
         >
           M<span>B</span>

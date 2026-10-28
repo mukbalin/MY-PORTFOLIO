@@ -18,7 +18,7 @@ export default function Home() {
             <span>BELLO</span>
           </h1>
           <p className="hero-alias">
-            ALSO KNOWN AS MUKBAL<span>↗</span>
+            WEB DEVELOPER &amp; CREATIVE THINKER<span>↗</span>
           </p>
         </div>
         <div className="hero-center">

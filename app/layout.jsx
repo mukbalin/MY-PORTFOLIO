@@ -17,9 +17,12 @@ const display = localFont({
   display: "swap",
 });
 export const metadata = {
-  title: { default: "Mukbal | Web Developer", template: "%s | Mukbal" },
+  title: {
+    default: "Mukhtar Bello | Web Developer",
+    template: "%s | Mukhtar Bello",
+  },
   description:
-    "Enter Mukbal’s universe. Responsive websites, thoughtful interfaces, and creative web experiences by Mukhtar Bello.",
+    "Enter Mukhtar Bello’s universe. Responsive websites, thoughtful interfaces, and creative web experiences by Mukhtar Bello.",
 };
 export default function RootLayout({ children }) {
   return (
