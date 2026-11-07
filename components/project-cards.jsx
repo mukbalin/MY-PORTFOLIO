@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
-import portrait from "../public/profile.jpg";
+import portrait from "../public/mukbal.jpg";
 import Icon from "./icon";
 function Preview() {
   return (

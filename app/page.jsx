@@ -1,6 +1,6 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import portrait from "../public/profile.jpg";
+import portrait from "../public/mukbal.jpg";
 import Icon from "../components/icon";
 export default function Home() {
   return (
